@@ -1,1 +1,1 @@
-﻿2026-01-15T18:41:25 - Update docker-compose
+﻿2026-01-16T18:57:09 - Refactor helper functions
