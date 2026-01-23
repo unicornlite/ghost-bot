@@ -1,1 +1,1 @@
-﻿2026-01-22T11:30:18 - Update API endpoints
+﻿2026-01-23T12:25:23 - Fix typo in config
