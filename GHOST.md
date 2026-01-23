@@ -1,1 +1,1 @@
-﻿2026-01-23T12:25:23 - Fix typo in config
+﻿2026-01-23T18:21:54 - Update documentation
