@@ -1,1 +1,1 @@
-﻿2026-02-10T13:34:27 - Add CI/CD workflow
+﻿2026-02-11T09:06:16 - Fix typo in config
