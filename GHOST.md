@@ -1,1 +1,1 @@
-﻿2026-02-11T09:33:01 - Update docker-compose
+﻿2026-02-13T18:15:02 - Remove dead code
