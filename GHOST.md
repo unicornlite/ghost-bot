@@ -1,1 +1,1 @@
-﻿2026-03-26T13:22:03 - Update documentation
+﻿2026-03-27T18:41:14 - Refactor helper functions
