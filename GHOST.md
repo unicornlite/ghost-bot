@@ -1,1 +1,1 @@
-﻿2026-05-28T12:03:15 - Fix typo in comments
+﻿2026-05-28T16:41:45 - Refactor helper functions
