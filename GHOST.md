@@ -1,1 +1,1 @@
-﻿2026-06-22T10:21:55 - Fix lint errors
+﻿2026-06-24T12:04:20 - Refactor helper functions
