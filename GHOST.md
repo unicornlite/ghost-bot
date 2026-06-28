@@ -1,1 +1,1 @@
-﻿2026-06-28T13:21:41 - Update docker-compose
+﻿2026-06-28T15:08:25 - Fix typo in config
