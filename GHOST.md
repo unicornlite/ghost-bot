@@ -1,1 +1,1 @@
-﻿2026-07-07T10:09:31 - Refactor helper functions
+﻿2026-07-07T09:59:26 - Fix typo in config
