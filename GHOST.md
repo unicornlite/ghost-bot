@@ -1,1 +1,1 @@
-﻿2026-07-21T13:57:02 - Bump version
+﻿2026-07-21T17:53:47 - Update .gitignore
