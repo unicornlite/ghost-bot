@@ -1,1 +1,1 @@
-﻿2026-07-20T16:04:13 - Update API endpoints
+﻿2026-07-21T13:57:02 - Bump version
