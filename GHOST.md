@@ -1,1 +1,1 @@
-﻿2026-07-23T10:33:23 - Update API endpoints
+﻿2026-07-23T11:53:14 - Update documentation
