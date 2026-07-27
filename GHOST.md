@@ -1,1 +1,1 @@
-﻿2026-07-26T12:25:36 - Fix minor bug
+﻿2026-07-27T11:29:08 - Update API endpoints
