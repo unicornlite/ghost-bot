@@ -1,1 +1,1 @@
-﻿2026-09-17T11:22:04 - Add unit tests
+﻿2026-09-18T14:53:28 - Refactor helper functions
