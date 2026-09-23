@@ -1,1 +1,1 @@
-﻿2026-09-23T11:43:11 - Format code
+﻿2026-09-23T12:32:18 - Refactor helper functions
