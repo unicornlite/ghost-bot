@@ -10,17 +10,24 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v3
+      # FIX: v3 sudah deprecated -> v4, dan pakai fetch-depth 0 biar push tidak gagal di shallow clone
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Randomize Time and Commit
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          
+
+          # FIX: sinkron dulu biar tidak conflict saat push
+          git pull --rebase origin main || true
+
           # Mode stealth: 70% chance to commit (natural, ada hari bolong)
           if [ $((RANDOM % 100)) -lt 70 ]; then
             COMMITS=$(( (RANDOM % 3) + 1 ))
             echo "Making $COMMITS commits today."
-            
+
             MESSAGES=(
               "Update README.md" "Fix typo in config" "Refactor legacy code" "Update dependencies"
               "Tweak styles" "Cleanup unused imports" "Resolve merge conflicts" "Patch security vulnerability"
@@ -29,27 +36,31 @@ jobs:
               "Remove dead code" "Add logging" "Fix typo in comments" "Update docker-compose"
               "Format code" "Add CI/CD workflow" "Update API endpoints"
             )
-            
+
             for i in $(seq 1 $COMMITS); do
               # Jam kerja normal: 08:00 - 18:00
               HOUR=$(( (RANDOM % 11) + 8 ))
               MIN=$((RANDOM % 60))
               SEC=$((RANDOM % 60))
-              
+
               RANDOM_DATE=$(date -d "$(date +%Y-%m-%d) $HOUR:$MIN:$SEC" --iso-8601=seconds)
-              
+
               export GIT_AUTHOR_DATE="$RANDOM_DATE"
               export GIT_COMMITTER_DATE="$RANDOM_DATE"
-              
+
               MSG=${MESSAGES[$RANDOM % ${#MESSAGES[@]}]}
-              
+
               # Modifikasi file beneran biar nggak kedetect empty-commit
               echo "$RANDOM_DATE - $MSG" > GHOST.md
               git add GHOST.md
               git commit -m "$MSG"
             done
-            
-            git push
+
+            unset GIT_AUTHOR_DATE
+            unset GIT_COMMITTER_DATE
+
+            # FIX: push eksplisit ke main, lebih robust dari 'git push' polos
+            git push origin HEAD:main
           else
             echo "Skipping today to keep the graph natural."
           fi
