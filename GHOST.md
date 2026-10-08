@@ -1,1 +1,1 @@
-2026-10-08T11:33:51+00:00 - Bump version
+2026-10-08T11:38:04+00:00 - Fix typo in config
